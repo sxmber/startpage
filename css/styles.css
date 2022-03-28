@@ -1,3 +1,6 @@
+html {
+    font-family: 'Roboto Slab', serif;;
+}
 body {
     background-color: #344055;
     margin: 0;
@@ -7,7 +10,6 @@ body {
     font-size: 5em;
     text-align: center;
     transform: translateY(2em);
-    font-family: 'Roboto Slab', serif;
     color: #F3F3F3;
     
 }
@@ -20,7 +22,7 @@ body {
 
 #s {
     width: 40%;
-    height: 37px;
+    height: 40px;
     border-radius: 7px;
     background-color: #4C5E7D;
     border: none;
@@ -28,24 +30,43 @@ body {
 
 #s:focus {
     outline: none;
+    caret-color: #cecece;
+}
+
+#s::placeholder {
+    color: #cecece;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 700;
+}
+
+#s:focus::placeholder{
+    color: transparent;
 }
 
 .container {
     display: flex;
     height: 400px;
-    width: 40%;
+    width: 50%;
     /* background-color: white; */
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     transform: translatey(15em);
     margin: auto;
-    
+    flex: 0 0 100%
     
 }
 
 .container div {
     height: 350px;
-    width: 230px;
+    width: 260px;
     background-color: #4C5E7D;
+    
+}
+
+.container div:hover{
+    box-shadow: 0px 5px 15px #252d3b;
+    transform: translateY(-2px);
+    transition: all 0.1s ease-in-out;
 }
